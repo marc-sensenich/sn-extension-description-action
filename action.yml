@@ -1,13 +1,63 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: Generate Standard Notes extension JSON description
+author: Marc Sensenich
+description: Generates a Standard Notes extension JSON description and writes it to a file
+branding:
+  icon: file_text
+  color: blue
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  # Standard Notes extension fields
+  identifier:
+    description: A unique, reverse domain style identifier for your extension.
     required: true
-    default: '1000'
+  name:
+    description: The name of your extension.
+    required: true
+  content_type:
+    description: The content type of your extension. Typically `SN|Component` or `SN|Theme`.
+    required: true
+  area:
+    description: The area for your extension. One of `editor_editor`, `editor_stack`, `themes`, `note_tags`, `tags_list`.
+    required: true
+  version:
+    description: The version of your extension. Needs to match the version in `package.json` in the generated zip file.
+    required: true
+  description:
+    description: The description that will be displayed in the Extensions browser.
+    required: true
+  url:
+    description: The location of the hosted extension. It must be a link to either an HTML file (for components) or a CSS file (for themes).
+    required: true
+  download_url:
+    description: The location of the generated zip file for the hosted extension. 
+    required: true
+  latest_url:
+    description: The endpoint that Standard Notes will ping to automatically update the extension.
+    required: false
+  marketing_url: 
+    description: The location the Extensions manager will use for an `Info` button for your extension. 
+    required: false
+  thumbnail_url:
+    description: The image the Extensions manager will display for your extension.
+    required: false
+  dock_icon_background_color:
+    description: The background hex color code for the dock icon of a theme extension. Defaults to `#FFFFFF`. 
+    required: false
+    default: '#FFFFFF'
+  dock_icon_foreground_color:
+    description: The foreground hex color code for the dock icon of a theme extension. Defaults to `#FFFFFF`. 
+    required: false
+    default: '#FFFFFF'
+  dock_icon_border_color:
+    description: The border hex color code for the dock icon of a theme extension. Defaults to `#FFFFFF`. 
+    required: false
+    default: '#FFFFFF'
+  # Inputs for file output
+  output_path:
+    description: Path to the file to optionally output the JSON description to.
+    required: false
 outputs:
-  time: # output will be available to future steps
-    description: 'The message to output'
+  extension_description:
+    description: The generated Standard Notes extension JSON description.
 runs:
   using: 'node12'
   main: 'dist/index.js'

@@ -22,4 +22,11 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ./
       with:
-        milliseconds: 1000
+        identifier: com.example.example-component
+        name: Example
+        description: An example component.
+        content_type: SN|Component
+        area: editor-editor
+        version: 0.1.0
+        url: https://cdn.jsdelivr.net/gh/example/example-component@v0.1.0/dist/dist.css
+        download_url: https://github.com/marc-sensenich/sn-nord-theme/archive/refs/tags/v0.1.0.zip"
