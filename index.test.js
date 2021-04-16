@@ -71,10 +71,10 @@ const EXPECTED_FULL_EXTENSION_OUTPUT = {
   marketing_url: INPUT_MARKETING_URL,
   thumbnail_url: INPUT_THUMBNAIL_URL,
   dock_icon: {
-    dock_icon_type: 'circle',
-    dock_icon_background_color: INPUT_ICON_HEX_COLOR,
-    dock_icon_foreground_color: INPUT_ICON_HEX_COLOR,
-    dock_icon_border_color: INPUT_ICON_HEX_COLOR,
+    type: 'circle',
+    background_color: INPUT_ICON_HEX_COLOR,
+    foreground_color: INPUT_ICON_HEX_COLOR,
+    border_color: INPUT_ICON_HEX_COLOR,
   }
 };
 

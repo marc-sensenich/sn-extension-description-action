@@ -48,19 +48,19 @@ let generateExtensionDescription = function ({
         let dockIcon = {};
 
         if (dockIconBackgroundColor) {
-            dockIcon['dock_icon_background_color'] = dockIconBackgroundColor;
+            dockIcon['background_color'] = dockIconBackgroundColor;
         }
 
         if (dockIconForegroundColor) {
-            dockIcon['dock_icon_foreground_color'] = dockIconForegroundColor;
+            dockIcon['foreground_color'] = dockIconForegroundColor;
         }
 
         if (dockIconBorderColor) {
-            dockIcon['dock_icon_border_color'] = dockIconBorderColor;
+            dockIcon['border_color'] = dockIconBorderColor;
         }
 
         if (Object.keys(dockIcon).length > 0) {
-            dockIcon['dock_icon_type'] = 'circle';
+            dockIcon['type'] = 'circle';
             extensionDescription['dock_icon'] = dockIcon;
         }
     }
