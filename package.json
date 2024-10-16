@@ -26,13 +26,13 @@
   },
   "homepage": "https://github.com/marc-sensenich/sn-extension-description-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.7",
+    "@actions/core": "^1.9.1",
     "@actions/io": "^1.1.0"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.27.0",
     "eslint": "^7.4.0",
-    "jest": "^26.6.3",
+    "jest": "^29.7.0",
     "temp": "^0.9.4"
   }
 }
