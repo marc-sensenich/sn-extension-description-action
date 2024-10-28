@@ -1,6 +1,6 @@
 {
   "name": "sn-extension-description-action",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Action to generate Standard Notes Extension Description",
   "main": "index.js",
   "scripts": {
